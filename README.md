@@ -26,7 +26,7 @@
 
 <h2 id="licenties">🪪 Licenties</h2>
 
-Geen licentie / No license
+![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
 
-Copyright (C) 2023 [Simple Soft Products](https://sspnet.nl/). Alle rechten voorbehouden / All rights reserved.
+This work is licensed under [GNU GPLv3](./LICENSE).
 
