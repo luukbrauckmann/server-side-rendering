@@ -11,9 +11,11 @@
 4. Licenties
 
 <h2 id="beschrijving">ℹ️ Beschrijving</h2>
+
 ***
 
 <h2 id="kenmerken">✨ Kenmerken</h2>
+
 ***
 
 <h2 id="installatie">📥 Installatie</h2>
