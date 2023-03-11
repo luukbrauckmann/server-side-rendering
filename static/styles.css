@@ -140,7 +140,6 @@ main {
 	flex-flow: column nowrap;
 	gap: var(--spacing);
 	align-items: center;
-	background: var(--primary-color);
 }
 
 .under-construction__header__icon {
