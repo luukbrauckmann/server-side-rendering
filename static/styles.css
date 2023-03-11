@@ -1,0 +1,149 @@
+/* Font faces */
+@font-face {
+	font-family: Roboto;
+	src: url('fonts/Roboto/Roboto-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+:root {
+	--font-size: 1rem;
+	--spacing: 1rem;
+
+	--background: #F3F3F3;
+	--primary-color: #D4005B;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	font-size: var(--font-size);
+	font-family: Roboto, san-serif;
+	background: var(--background);
+}
+
+body {
+	display: flex;
+	flex-flow: column-reverse nowrap;
+}
+
+body > header,
+body > footer {
+	flex: 0 1 auto;
+}
+
+body > main {
+	flex: 1 1 auto;
+}
+
+.svg-inline--fa {
+	width: 1em;
+	height: 1em;
+}
+
+nav {
+	background: var(--primary-color);
+}
+
+.nav {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.nav__item {
+	text-align: center;
+}
+
+.nav__item a {
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 0 .5rem .5rem .5rem;
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav__item .nav__item__icon {
+	font-size: 1.5rem;
+}
+
+.nav__item .nav__item__label {
+	font-size: .75rem;
+}
+
+.nav__item .svg-inline--fa {
+	padding: .5rem;
+}
+
+.nav__item[data-active=true] .svg-inline--fa {
+	background: var(--background);
+	border-radius: 0 0 50% 50%;
+}
+
+.nav__item[data-active=true] .svg-inline--fa * {
+	color: var(--primary-color);
+}
+
+main {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.main__header {
+
+	flex: 0 1 auto;
+	padding: var(--spacing);
+	background: #fff;
+}
+
+.main__header__label {
+	color: var(--primary-color);
+}
+
+.main__content {
+	flex: 1 1 auto;
+	padding: var(--spacing);
+}
+
+.start__list {
+	list-style: none;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--spacing);
+}
+
+.card {
+	background: #fff;
+	border-radius: var(--font-size);
+}
+
+.card__header,
+.card__content,
+.card__footer {
+	padding: var(--spacing);
+}
+
+.container {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--spacing);
+}
+
+.under-construction {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--spacing);
+	align-items: center;
+	background: var(--primary-color);
+}
+
+.under-construction__header__icon {
+	font-size: 10rem;
+	color: var(--primary-color);
+}
