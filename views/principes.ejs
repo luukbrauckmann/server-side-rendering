@@ -1,16 +1,16 @@
 <header class="main__header">
 	<h1>
 		<span class="main__header__icon">
-			<i class="fa-duotone fa-tools"></i>
+			<i class="fa-duotone fa-universal-access"></i>
 		</span>
-		<span class="main__header__label">Toolboard</span>
+		<span class="main__header__label">Principes</span>
 	</h1>
 </header>
 
 <div class="main__content">
 	<section class="container">
 		<div>
-			<ul>
+			<ul class="principes_list">
 				<% for(let principe of principes) { %>
 					<li>
 						<article class="card">
@@ -21,6 +21,15 @@
 							<div class="card__content">
 								<%- principe.beschrijving.html %>
 							</div>
+
+							<footer class="card__footer">
+								<a class="button" href="/principes/<%- principe.slug %>">
+									<span class="button__label">Naar <%- principe.slug %></span>
+									<span class="button__icon">
+										<i class="fa-duotone fa-arrow-right"></i>
+									</span>
+								</a>
+							</footer>
 						</article>
 
 					</li>

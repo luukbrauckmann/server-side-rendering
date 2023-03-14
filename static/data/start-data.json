@@ -1,0 +1,16 @@
+[
+	{
+		"icon": "universal-access",
+		"label": "Principes",
+		"slug": "principes",
+		"description": "",
+		"href": "/principes"
+	},
+	{
+		"icon": "user",
+		"label": "Account",
+		"slug": "account",
+		"description": "",
+		"href": "/account"
+	}
+]

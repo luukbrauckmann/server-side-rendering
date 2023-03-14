@@ -1,0 +1,22 @@
+[
+	{
+		"path": "/",
+		"title": "Start",
+		"templateName": "start"
+	},
+	{
+		"path": "/404",
+		"title": "404",
+		"templateName": "not-found"
+	},
+	{
+		"path": "/principes",
+		"title": "Principes",
+		"templateName": "principes"
+	},
+	{
+		"path": "/account",
+		"title": "Account",
+		"templateName": "account"
+	}
+]

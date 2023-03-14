@@ -1,28 +1,14 @@
 <nav>
 	<ul class="nav">
-		<li class="nav__item" data-active="<%- route.path === '/' %>">
-			<a href="/">
-				<span class="nav__item__icon">
-					<i class="fa-duotone fa-home"></i>
-				</span>
-				<span class="nav__item__label">Start</span>
-			</a>
-		</li>
-		<li class="nav__item" data-active="<%- route.path === '/toolboard' %>">
-			<a href="/toolboard">
-				<span class="nav__item__icon">
-					<i class="fa-duotone fa-tools"></i>
-				</span>
-				<span class="nav__item__label">Toolboard</span>
-			</a>
-		</li>
-		<li class="nav__item" data-active="<%- route.path === '/account' %>">
-			<a href="/account">
-				<span class="nav__item__icon">
-					<i class="fa-duotone fa-user"></i>
-				</span>
-				<span class="nav__item__label">Account</span>
-			</a>
-		</li>
+		<% for (let menuItem of menu) { %>
+			<li class="nav__item" data-active="<%- route.path === menuItem.href %>">
+				<a href="<%- menuItem.href %>">
+					<span class="nav__item__icon">
+						<i class="fa-duotone fa-<%= menuItem.icon %>"></i>
+					</span>
+					<span class="nav__item__label"><%= menuItem.label %></span>
+				</a>
+			</li>
+		<% } %>
 	</ul>
 </nav>

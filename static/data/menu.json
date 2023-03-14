@@ -1,0 +1,17 @@
+[
+	{
+		"href": "/",
+		"label": "Start",
+		"icon": "home"
+	},
+	{
+		"href": "/principes",
+		"label": "Principes",
+		"icon": "universal-access"
+	},
+	{
+		"href": "/account",
+		"label": "Account",
+		"icon": "user"
+	}
+]

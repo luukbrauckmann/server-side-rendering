@@ -1,4 +1,14 @@
-/* Font faces */
+/*
+====================
+Imports
+*/
+
+
+
+/*
+====================
+Fonts
+*/
 @font-face {
 	font-family: Roboto;
 	src: url('fonts/Roboto/Roboto-Regular.ttf');
@@ -6,13 +16,36 @@
 	font-style: normal;
 }
 
+/*
+====================
+Variables
+*/
 :root {
 	--font-size: 1rem;
 	--spacing: 1rem;
 
 	--background: #F3F3F3;
 	--primary-color: #D4005B;
+
+	--success-color: #22C55E;
+	--info-color: #3B82F6;
+	--warning-color: #F59E0B;
+	--danger-color: #EF4444;
+
+	--body-padding: calc(((100vw - var(--max-screen-width)) / 2) + var(--spacing));
+	--max-screen-width: 100%;
+
+	--breakpoint-sm: 36rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 62rem;
+	--breakpoint-xl: 75rem;
+	--breakpoint-xxl: 90rem;
 }
+
+/*
+====================
+Default styling
+*/
 
 * {
 	box-sizing: border-box;
@@ -40,12 +73,64 @@ body > footer {
 
 body > main {
 	flex: 1 1 auto;
+	overflow: auto;
 }
 
 .svg-inline--fa {
 	width: 1em;
 	height: 1em;
 }
+
+a {
+	color: var(--primary-color);
+	text-decoration: none;
+}
+
+/*
+====================
+Components
+*/
+
+.card {
+	background: #fff;
+	border-radius: var(--font-size);
+}
+
+.card__header,
+.card__content,
+.card__footer {
+	padding: var(--spacing);
+}
+
+/* .button {
+
+} */
+
+/*
+====================
+Utilities
+*/
+
+.text-primary {
+	color: var(--primary-color);
+}
+
+.text-xl {
+	font-size: 1.5rem;
+}
+
+.text-2xl {
+	font-size: 2rem;
+}
+
+.text-3xl {
+	font-size: 3rem;
+}
+
+/*
+====================
+Custom styling
+*/
 
 nav {
 	background: var(--primary-color);
@@ -55,6 +140,7 @@ nav {
 	list-style: none;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	padding-inline: var(--body-padding);
 }
 
 .nav__item {
@@ -69,21 +155,70 @@ nav {
 	text-decoration: none;
 }
 
-.nav__item .nav__item__icon {
-	font-size: 1.5rem;
-}
-
 .nav__item .nav__item__label {
 	font-size: .75rem;
 }
 
 .nav__item .svg-inline--fa {
 	padding: .5rem;
+	font-size: 1.5rem;
 }
+
+.nav__item[data-active=true] {
+	position: relative;
+}
+
+.nav__item[data-active=true]::before,
+.nav__item[data-active=true]::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1.25em;
+	height: 1.25em;
+	background: var(--primary-color);
+	z-index: 2;
+}
+
+.nav__item[data-active=true]::before {
+	transform: translateX(-200%);
+	border-top-right-radius: 1.25em;
+}
+
+.nav__item[data-active=true]::after {
+	transform: translateX(100%);
+	border-top-left-radius: 1.25em;
+}
+
+.nav__item[data-active=true] .nav__item__icon {
+	position: relative;
+}
+
+.nav__item[data-active=true] .nav__item__icon::before,
+.nav__item[data-active=true] .nav__item__icon::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1.25em;
+	height: 1.25em;
+	background: var(--background);
+	z-index: 1;
+}
+
+.nav__item[data-active=true] .nav__item__icon::before {
+	transform: translateX(-200%);
+}
+
+.nav__item[data-active=true] .nav__item__icon::after {
+	transform: translateX(100%);
+}
+
 
 .nav__item[data-active=true] .svg-inline--fa {
 	background: var(--background);
 	border-radius: 0 0 50% 50%;
+	position: relative;
 }
 
 .nav__item[data-active=true] .svg-inline--fa * {
@@ -95,10 +230,14 @@ main {
 	flex-flow: column nowrap;
 }
 
-.main__header {
+.main__header,
+.main__content,
+.main__footer {
+	padding: var(--spacing) var(--body-padding);
+}
 
+.main__header {
 	flex: 0 1 auto;
-	padding: var(--spacing);
 	background: #fff;
 }
 
@@ -108,7 +247,6 @@ main {
 
 .main__content {
 	flex: 1 1 auto;
-	padding: var(--spacing);
 }
 
 .start__list {
@@ -116,17 +254,6 @@ main {
 	display: flex;
 	flex-flow: column nowrap;
 	gap: var(--spacing);
-}
-
-.card {
-	background: #fff;
-	border-radius: var(--font-size);
-}
-
-.card__header,
-.card__content,
-.card__footer {
-	padding: var(--spacing);
 }
 
 .container {
@@ -145,4 +272,46 @@ main {
 .under-construction__header__icon {
 	font-size: 10rem;
 	color: var(--primary-color);
+}
+
+.principes_list {
+	list-style: none;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--spacing);
+}
+
+@media (min-width: 36rem) {
+	:root {
+		--max-screen-width: var(--breakpoint-sm);
+	}
+}
+
+@media (min-width: 48rem) {
+	:root {
+		--max-screen-width: var(--breakpoint-md);
+	}
+}
+
+@media (min-width: 62rem) {
+	:root {
+		--max-screen-width: var(--breakpoint-lg);
+	}
+
+	body {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+}
+
+@media (min-width: 75rem) {
+	:root {
+		--max-screen-width: var(--breakpoint-xl);
+	}
+}
+
+@media (min-width: 90rem) {
+	:root {
+		--max-screen-width: var(--breakpoint-xxl);
+	}
 }
