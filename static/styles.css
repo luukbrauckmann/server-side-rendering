@@ -25,6 +25,7 @@ Variables
 	--spacing: 1rem;
 
 	--background: #F3F3F3;
+	--background-secondary: #fff;
 	--primary-color: #D4005B;
 
 	--success-color: #22C55E;
@@ -40,6 +41,16 @@ Variables
 	--breakpoint-lg: 62rem;
 	--breakpoint-xl: 75rem;
 	--breakpoint-xxl: 90rem;
+
+	color-scheme: dark light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #222;
+		--background-secondary: #444;
+		--primary-color: #B9005F;
+	}
 }
 
 /*
@@ -93,14 +104,21 @@ Components
 */
 
 .card {
-	background: #fff;
-	border-radius: var(--font-size);
+	font-size: 1em;
+	border-radius: 1em;
+	overflow: hidden;
+	background: var(--background-secondary);
 }
 
 .card__header,
 .card__content,
 .card__footer {
-	padding: var(--spacing);
+	padding: 1em;
+}
+
+.card__header {
+	display: inline-block;
+	position: relative;
 }
 
 /* .button {
@@ -242,7 +260,7 @@ main {
 
 .main__header {
 	flex: 0 1 auto;
-	background: #fff;
+	background: var(--background-secondary);
 }
 
 .main__header__label {
