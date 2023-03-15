@@ -1,7 +1,7 @@
 <nav>
 	<ul class="nav">
 		<% for (let menuItem of menu) { %>
-			<li class="nav__item" data-active="<%- route.path === menuItem.href %>">
+			<li class="nav__item" data-path="<%- menuItem.href %>" data-active="<%- route.path === menuItem.href %>">
 				<a href="<%- menuItem.href %>">
 					<span class="nav__item__icon">
 						<i class="fa-duotone fa-<%= menuItem.icon %>"></i>

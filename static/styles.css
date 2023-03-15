@@ -64,6 +64,7 @@ body {
 body {
 	display: flex;
 	flex-flow: column-reverse nowrap;
+	padding-bottom: 4rem;
 }
 
 body > header,
@@ -74,7 +75,6 @@ body > footer {
 body > main {
 	flex: 1 1 auto;
 	overflow: auto;
-	padding-bottom: 4rem;
 }
 
 .svg-inline--fa {
@@ -147,6 +147,18 @@ Custom styling
 
 .nav__item {
 	text-align: center;
+}
+
+.nav__item[data-path="/"] {
+	order: 2;
+}
+
+.nav__item[data-path="/principes"] {
+	order: 1;
+}
+
+.nav__item[data-path="/account"] {
+	order: 3;
 }
 
 .nav__item a {
