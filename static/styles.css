@@ -55,7 +55,7 @@ Default styling
 
 html,
 body {
-	height: 100vh;
+	height: 100%;
 	font-size: var(--font-size);
 	font-family: Roboto, san-serif;
 	background: var(--background);
@@ -74,6 +74,7 @@ body > footer {
 body > main {
 	flex: 1 1 auto;
 	overflow: auto;
+	padding-bottom: 4rem;
 }
 
 .svg-inline--fa {
@@ -139,6 +140,9 @@ Custom styling
 	grid-template-columns: repeat(3, 1fr);
 	padding-inline: var(--body-padding);
 	background: var(--primary-color);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 .nav__item {
