@@ -20,7 +20,7 @@ De website wordt server side gerendered door middel van NodeJS & EJS. Het is geb
 
 <h2 id="installatie">📥 Installatie</h2>
 
-***
+Zorg dat je NodeJS geïnstalleerd hebt. Clone deze repository. Open een terminal. Zorg dat je in de juiste pad zit van dit project. Voer de commando `npm install` uit. Wanneer deze klaar is kun je de applicatie starten door de commando `npm start` uit te voeren.
 
 <h2 id="bronnen">🌍 Bronnen</h2>
 
