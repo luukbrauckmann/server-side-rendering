@@ -16,7 +16,7 @@ Toolgankelijk is een tool...
 
 <h2 id="kenmerken">✨ Kenmerken</h2>
 
-De website wordt server side gerendered door middel van NodeJS & EJS. Het is gebouwd in HTML, CSS & JS. Data wordt geleverd door de API van FDND die voor vervoerregio-amsterdam is gemaakt.
+De website wordt server side gerendered door middel van NodeJS & EJS. Het is gebouwd in HTML, CSS & JS. Data wordt geleverd door de API van FDND die voor vervoerregio-amsterdam is gemaakt. De applicatie wordt gehost op http://localhost:3000/
 
 <h2 id="installatie">📥 Installatie</h2>
 
