@@ -26,7 +26,9 @@ De website wordt server side gerendered door middel van NodeJS & EJS. Het is geb
 
 - [Instructies](docs/INSTRUCTIONS.md)
 - [NodeJS](https://nodejs.org/)
+- [ExpressJS](https://expressjs.com/)
 - [EJS](https://ejs.co/)
+- [API Documentatie](https://api.vervoerregio-amsterdam.fdnd.nl/)
 
 <h2 id="licenties">🪪 Licenties</h2>
 
